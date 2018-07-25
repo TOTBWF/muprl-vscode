@@ -1,0 +1,26 @@
+{
+    "name": "muprl-vscode",
+    "displayName": "MuPRL",
+    "description": "Language Support for the MuPRL Proof Assistant",
+    "version": "0.0.1",
+    "publisher": "totbwf",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "muprl",
+            "aliases": ["MuPRL", "muprl"],
+            "extensions": [".mprl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "muprl",
+            "scopeName": "source.muprl",
+            "path": "./syntaxes/muprl.tmLanguage.json"
+        }]
+    }
+}

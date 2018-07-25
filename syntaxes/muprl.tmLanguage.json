@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MuPRL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.muprl",
+				"match": "\\b(intro|rule|elim|Theorem)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.muprl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.muprl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": "--.*"
+			}]
+		}
+	},
+	"scopeName": "source.muprl"
+}
